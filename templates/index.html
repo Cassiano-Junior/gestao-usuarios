@@ -9,12 +9,20 @@
   </head>
   <body>
 
-    <h1>Gestão de Clientes</h1>
+   <div class="container">
+      <h1 class="text-center">Gestão de Clientes</h1>
     
-    <div c-container="{{ url_for('cliente.lista_clientes')}}"></div>
+      <div c-container="{{ url_for('cliente.form_cliente') }}"></div>
 
+      <hr>
+      <h2>Lista de Clientes</h2>
+
+       <div c-container="{{ url_for('cliente.lista_clientes')}}"></div>
+    </div> 
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-
     <script src="{{ url_for('static', filename='js/cru.js')}}"></script>
+
   </body>
 </html>
